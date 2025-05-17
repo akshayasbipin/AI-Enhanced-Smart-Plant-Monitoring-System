@@ -33,7 +33,7 @@ The Smart Plant Monitoring System is an IoT-based project designed to monitor an
 
 ## Demo Video
 
-[Watch the demo here](URL_to_your_video)
+[Watch the demo here](final_draft_proj.mp4)
 
 ## License
 
