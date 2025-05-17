@@ -25,7 +25,7 @@ The Smart Plant Monitoring System is an IoT-based project designed to monitor an
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/akshayasbipin/PlantCareBot.git]
+   git clone https://github.com/akshayasbipin/PlantCareBot.git
    ```
 2. Upload the Arduino code to the NodeMCU.
 3. Connect the sensors and the water pump as per the circuit diagram.
