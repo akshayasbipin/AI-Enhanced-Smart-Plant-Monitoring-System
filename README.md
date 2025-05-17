@@ -13,9 +13,7 @@
 
 <h2>Features</h2>
 <ul>
-    <li>Monitors temperature, humidity, and soil moisture.</li>
-    <li>Detects animal movement using a PIR sensor.</li>
-    <li>Manual water pump activation via a button.</li>
+    <li>Monitors soil moisture.</li>
     <li>Real-time data monitoring using NodeMCU.</li>
 </ul>
 
@@ -24,8 +22,6 @@
     <li>NodeMCU (ESP8266)</li>
     <li>Temperature and Humidity Sensor (DHT11)</li>
     <li>Soil Moisture Sensor</li>
-    <li>PIR Motion Sensor</li>
-    <li>Water Pump with Button</li>
     <li>Connecting Wires and Breadboard</li>
 </ul>
 
