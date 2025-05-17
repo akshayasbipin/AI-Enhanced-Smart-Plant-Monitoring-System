@@ -6,45 +6,45 @@
     <title>Smart Plant Monitoring System</title>
 </head>
 <body>
-    <h1>Smart Plant Monitoring System</h1>
-    
-    <h2>Overview</h2>
-    <p>The Smart Plant Monitoring System is an IoT-based project designed to monitor and maintain optimal conditions for plant growth. It uses temperature, humidity, soil moisture, and PIR sensors to track environmental factors and detects animal movement. A water pump button is included for irrigation control.</p>
+<h1>Smart Plant Monitoring System</h1>
 
-    <h2>Features</h2>
-    <ul>
-        <li>Monitors temperature, humidity, and soil moisture.</li>
-        <li>Detects animal movement using a PIR sensor.</li>
-        <li>Manual water pump activation via a button.</li>
-        <li>Real-time data monitoring using NodeMCU.</li>
-    </ul>
+<h2>Overview</h2>
+<p>The Smart Plant Monitoring System is an IoT-based project designed to monitor and maintain optimal conditions for plant growth. It uses temperature, humidity, soil moisture, and PIR sensors to track environmental factors and detects animal movement. A water pump button is included for irrigation control.</p>
 
-    <h2>Components Used</h2>
-    <ul>
-        <li>NodeMCU (ESP8266)</li>
-        <li>Temperature and Humidity Sensor (DHT11)</li>
-        <li>Soil Moisture Sensor</li>
-        <li>PIR Motion Sensor</li>
-        <li>Water Pump with Button</li>
-        <li>Connecting Wires and Breadboard</li>
-    </ul>
+<h2>Features</h2>
+<ul>
+    <li>Monitors temperature, humidity, and soil moisture.</li>
+    <li>Detects animal movement using a PIR sensor.</li>
+    <li>Manual water pump activation via a button.</li>
+    <li>Real-time data monitoring using NodeMCU.</li>
+</ul>
 
-    <h2>How to Run</h2>
-    <ol>
-        <li>Clone the repository:</li>
-        <pre><code>git clone https://github.com/yourusername/smart-plant-monitor.git</code></pre>
-        <li>Upload the Arduino code to the NodeMCU.</li>
-        <li>Connect the sensors and the water pump as per the circuit diagram.</li>
-        <li>Monitor data in real-time through the connected device.</li>
-    </ol>
-      <h1>Demo video</h1>
-      <table>
-                  <tr>
-                      <td><img src="final_draft_proj.gif" alt="final_draft_proj"></td>
-                  </tr>
-              </table>
+<h2>Components Used</h2>
+<ul>
+    <li>NodeMCU (ESP8266)</li>
+    <li>Temperature and Humidity Sensor (DHT11)</li>
+    <li>Soil Moisture Sensor</li>
+    <li>PIR Motion Sensor</li>
+    <li>Water Pump with Button</li>
+    <li>Connecting Wires and Breadboard</li>
+</ul>
 
-    <h2>License</h2>
-    <p>This project is licensed under the MIT License.</p>
+<h2>How to Run</h2>
+<ol>
+    <li>Clone the repository:</li>
+    <pre><code>git clone https://github.com/yourusername/smart-plant-monitor.git</code></pre>
+    <li>Upload the Arduino code to the NodeMCU.</li>
+    <li>Connect the sensors and the water pump as per the circuit diagram.</li>
+    <li>Monitor data in real-time through the connected device.</li>
+</ol>
+  <h1>Demo video</h1>
+  <table>
+              <tr>
+                  <td><img src="final_draft_proj.gif" alt="final_draft_proj"></td>
+              </tr>
+          </table>
+
+<h2>License</h2>
+<p>This project is licensed under the MIT License.</p>
 </body>
 </html>
