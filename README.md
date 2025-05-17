@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Plant Monitoring System</title>
+<!--     <title>Smart Plant Monitoring System</title> -->
 </head>
 <body>
 <h1>Smart Plant Monitoring System</h1>
@@ -44,7 +44,7 @@
               </tr>
           </table>
 
-<h2>License</h2>
-<p>This project is licensed under the MIT License.</p>
+<!-- <h2>License</h2>
+<p>This project is licensed under the MIT License.</p> -->
 </body>
 </html>
