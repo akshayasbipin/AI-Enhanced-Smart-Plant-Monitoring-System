@@ -30,7 +30,7 @@
     <li>Clone the repository:</li>
     <pre><code>git clone https://github.com/akshayasbipin/PlantCareBot.git</code></pre>
     <li>Upload the Arduino code to the NodeMCU.</li>
-    <li>Connect the sensors and the water pump. </li>
+    <li>Connect the sensors. </li>
     <li>Monitor data in real-time through the connected device.</li>
     <pre><code>streamlit run code_v6.py</code></pre>
 </ol>
