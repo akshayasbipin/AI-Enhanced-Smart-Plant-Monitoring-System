@@ -28,9 +28,9 @@
 <h2>How to Run</h2>
 <ol>
     <li>Clone the repository:</li>
-    <pre><code>git clone https://github.com/yourusername/smart-plant-monitor.git</code></pre>
+    <pre><code>git clone https://github.com/akshayasbipin/PlantCareBot.git</code></pre>
     <li>Upload the Arduino code to the NodeMCU.</li>
-    <li>Connect the sensors and the water pump as per the circuit diagram.</li>
+    <li>Connect the sensors and the water pump. </li>
     <li>Monitor data in real-time through the connected device.</li>
 </ol>
   <h1>Demo video</h1>
