@@ -6,10 +6,10 @@
 <!--     <title>Smart Plant Monitoring System</title> -->
 </head>
 <body>
-<h1>Smart Plant Monitoring System</h1>
+<h1>AI - Enhanced Smart Plant Monitoring System</h1>
 
 <h2>Overview</h2>
-<p>The Smart Plant Monitoring System is an IoT-based project designed to monitor and maintain optimal conditions for plant growth. It uses temperature, humidity, soil moisture, and PIR sensors to track environmental factors and detects animal movement. A water pump button is included for irrigation control.</p>
+<p>The AI - Enhanced Smart Plant Monitoring System is an IoT-based project designed to monitor and maintain optimal conditions for plant growth.</p>
 
 <h2>Features</h2>
 <ul>
