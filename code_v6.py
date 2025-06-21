@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
 import io
 from datetime import datetime, timedelta
 import streamlit as st
@@ -98,7 +101,7 @@ st.title("🌱 Plant Healthcare Monitor")
 st.markdown("Track your plants' health and get personalized care recommendations")
 
 # Create tabs for different sections of the app
-tab2, tab4, tab5 = st.tabs(["Plant Details","Plant ChatBot", "Latest Analytics"])
+tab2, tab4, tab5, tab6 = st.tabs(["Plant Details","Plant ChatBot", "Latest Analytics","Moisture Predictor"])
 
 # Plant details tab
 with tab2:
@@ -282,3 +285,71 @@ with tab5:
         }
     ))
     st.plotly_chart(fig, use_container_width=True)
+    
+with tab6:
+    st.header("Machine Learning Model for Soil Moisture Prediction")
+    st.write("This section will allow you to upload a CSV file with soil moisture data and train a machine learning model to predict soil moisture status.")
+    
+    uploaded_file = st.file_uploader("Upload CSV with columns: id, plant_name, soil_moisture, created_at", type="csv")
+
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        
+        # Remove outliers using IQR method
+        Q1 = df['soil_moisture'].quantile(0.25)
+        Q3 = df['soil_moisture'].quantile(0.75)
+        IQR = Q3 - Q1
+        filtered_df = df[(df['soil_moisture'] >= Q1 - 1.5 * IQR) & (df['soil_moisture'] <= Q3 + 1.5 * IQR)]
+
+        # Calculate mean and std after outlier removal
+        mean_moisture = filtered_df['soil_moisture'].mean()
+        std_moisture = filtered_df['soil_moisture'].std()
+
+        ## Use percentiles instead of mean ± std
+        lower = df['soil_moisture'].quantile(0.33)
+        upper = df['soil_moisture'].quantile(0.66)
+
+        # Label moisture status based on dynamic thresholds
+        def moisture_status(moisture):
+            if moisture < lower:
+                return "Dry"
+            elif lower <= moisture <= upper:
+                return "Rightly Watered"
+            else:
+                return "Over watered"
+
+        df['status'] = df['soil_moisture'].apply(moisture_status)
+
+        # Encode plant_name for ML
+        le = LabelEncoder()
+        df['plant_encoded'] = le.fit_transform(df['plant_name'])
+
+        # Prepare features and labels
+        X = df[['plant_encoded', 'soil_moisture']]
+        y = df['status']
+
+        # Split and train model
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        model = RandomForestClassifier(random_state=42)
+        model.fit(X_train, y_train)
+
+        st.success("✅ Model trained on uploaded data.")
+
+        # Get user input
+        st.header("Predict Soil Status")
+
+        plant = st.selectbox("Select Plant Type", df['plant_name'].unique())
+        moisture = st.slider("Enter current soil moisture (%)", min_value=0.0, max_value=100.0, step=0.1)
+
+        # Predict
+        plant_val = le.transform([plant])[0]
+        prediction = model.predict([[plant_val, moisture]])[0]
+
+        st.subheader(f"Prediction: 🌿 **{prediction}**")
+
+        # Show uploaded data
+        if st.checkbox("Show uploaded data"):
+            st.dataframe(df.head())
+
+    else:
+        st.info("📂 Please upload a CSV file to proceed.")
