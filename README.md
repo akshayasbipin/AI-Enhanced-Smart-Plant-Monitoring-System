@@ -15,6 +15,8 @@
 <ul>
     <li>Monitors soil moisture.</li>
     <li>Real-time data monitoring using NodeMCU.</li>
+    <li>Chat Bot for plant healthcare.</li>
+    <li>Predict the right amount of soil moisture for your plant.</li>
 </ul>
 
 <h2>Components Used</h2>
